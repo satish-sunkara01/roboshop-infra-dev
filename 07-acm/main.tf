@@ -1,5 +1,5 @@
 resource "aws_acm_certificate" "saachi" {
-  domain_name       = "saachi.com"
+  domain_name       = "saachi.online"
   validation_method = "DNS"
 
   tags = merge(

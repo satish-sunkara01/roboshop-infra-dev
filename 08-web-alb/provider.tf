@@ -8,7 +8,7 @@ terraform {
 
   backend "s3" {
     bucket = "robodhop-state-dev"
-    key    = "acm_new"
+    key    = "web-alb_new"
     region = "us-east-1"
     dynamodb_table = "roboshop-locking-dev"
   }
