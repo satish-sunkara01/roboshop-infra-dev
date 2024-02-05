@@ -25,7 +25,7 @@ resource "null_resource" "mongodb" {
   # Bootstrap script can run on any instance of the cluster
   # So we just choose the first in this case
   connection {
-    host = module.mongodb.private_ip
+    host = "${module.mongodb.private_ip}"
     type = "ssh"
     # agent = false
     user = "centos"
@@ -73,7 +73,7 @@ resource "null_resource" "redis" {
   # Bootstrap script can run on any instance of the cluster
   # So we just choose the first in this case
   connection {
-    host = module.redis.private_ip
+    host = "${module.redis.private_ip}"
     type = "ssh"
     # agent = false
     user = "centos"
@@ -122,7 +122,7 @@ resource "null_resource" "mysql" {
   # Bootstrap script can run on any instance of the cluster
   # So we just choose the first in this case
   connection {
-    host = module.mysql.private_ip
+    host = "${module.mysql.private_ip}"
     type = "ssh"
     # agent = false
     user = "centos"
@@ -171,7 +171,7 @@ resource "null_resource" "rabbitmq" {
   # Bootstrap script can run on any instance of the cluster
   # So we just choose the first in this case
   connection {
-    host = module.rabbitmq.private_ip
+    host = "${module.rabbitmq.private_ip}"
     type = "ssh"
     # agent = false
     user = "centos"
