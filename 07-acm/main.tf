@@ -1,5 +1,5 @@
 resource "aws_acm_certificate" "saachi" {
-  domain_name       = "saachi.online"
+  domain_name       = "*.saachi.online"
   validation_method = "DNS"
 
   tags = merge(
@@ -25,7 +25,7 @@ resource "aws_route53_record" "saachi" {
   allow_overwrite = true
   name            = each.value.name
   records         = [each.value.record]
-  ttl             = 60
+  ttl             = 1
   type            = each.value.type
   zone_id         = data.aws_route53_zone.saachi.zone_id
 }
