@@ -18,4 +18,4 @@ module "roboshop" {
   #peering
   is_peering_required = var.is_peering_required
 
-}
+} 
