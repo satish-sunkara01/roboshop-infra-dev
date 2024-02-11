@@ -41,7 +41,7 @@ pipeline {
                 """
             }
         }
-        stage('DB & ALB') {
+        stage('DB ALB') {
             parallel {
                 stage('DB') {
                     steps {
@@ -55,7 +55,7 @@ pipeline {
                 stage(' APP-ALB') {
                     steps {
                         sh """
-                            cd 05-APP-ALB
+                            cd 05-app-alb
                             terraform init -reconfigure
                             terraform apply -auto-approve
                         """
